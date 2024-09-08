@@ -17,7 +17,7 @@ func EuclideanDistance(v1 Vector, v2 Vector) float64 {
 
 	distance := float64(0)
 	for i := 0; i < len(v1); i++ {
-		distance += v1[i] - v2[i]*v1[i] - v2[i]
+		distance += (v1[i] - v2[i]) * (v1[i] - v2[i])
 	}
 
 	return math.Sqrt(distance)
